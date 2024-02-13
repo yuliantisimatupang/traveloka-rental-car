@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.1 on win32)" generated="2024-02-13T18:06:05.281237" rpa="false" schemaversion="5">
+<suite id="s1" name="Car-Rental" source="d:\test\car-rental-WebAutomation\tests\car-rental.robot">
+<test id="s1-t1" name="Car Rental" line="8">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:05.453303" level="INFO">Opening browser 'chrome' to base url 'https://www.traveloka.com/'.</msg>
+<arg>https://www.traveloka.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-02-13T18:06:05.452304" elapsed="2.648810"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-02-13T18:06:08.102111" elapsed="0.150083"/>
+</kw>
+<kw name="FILTER FROM HOMEPAGE" owner="step-rent-car">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:08.253198" level="INFO">Clicking element 'xpath=//div[contains(text(),"Car Rental")]'.</msg>
+<arg>${btn_car_rental}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:08.253198" elapsed="0.278913"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btn_withoutDriver}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-13T18:06:08.533193" elapsed="0.461819"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:08.995012" level="INFO">Clicking element 'xpath=//h4[contains(text(),"Without Driver")]'.</msg>
+<arg>${btn_withoutDriver}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:08.995012" elapsed="0.106176"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:09.101188" level="INFO">Clicking element 'xpath=//input[@placeholder="Enter city or region"]'.</msg>
+<arg>${input_location}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:09.101188" elapsed="0.303674"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:09.405881" level="INFO">Typing text 'Jakarta' into text field 'xpath=//input[@placeholder="Enter city or region"]'.</msg>
+<arg>${input_location}</arg>
+<arg>Jakarta</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:09.404862" elapsed="0.457723"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:12.578702" level="INFO">Suppressing StaleElementReferenceException from Selenium.</msg>
+<arg>${dropdown_location}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-13T18:06:09.862585" elapsed="2.955797"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:12.819557" level="INFO">Clicking element 'xpath=//div[@aria-label="Jakarta"]'.</msg>
+<arg>${dropdown_location}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:12.819557" elapsed="0.084431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:12.903988" level="INFO">Clicking element 'xpath=//label/div[contains(text(),"Rental Start Date")]/../following-sibling::div[1]'.</msg>
+<arg>${rental_start_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:12.903988" elapsed="0.099987"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_start_date}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.003975" elapsed="0.052299"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.057714" level="INFO">Clicking element 'xpath=(//div[@data-testid="date-cell-15-2-2024"][1])[1]'.</msg>
+<arg>${select_start_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.056274" elapsed="0.124317"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.182101" level="INFO">Clicking element 'xpath=//input[@data-testid="rental-search-form-time-input-start"]'.</msg>
+<arg>${start_time}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.182101" elapsed="0.080011"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.263451" level="INFO">Clicking element 'xpath=//div[contains(text(), "Hour")]/following-sibling::div/div/div/div/div[normalize-space() = "9"]'.</msg>
+<arg>${select_hour_start}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.262112" elapsed="0.086221"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.349449" level="INFO">Clicking element '//div[contains(text(), "Minute")]/following-sibling::div/div/div/div/div[normalize-space() = "0"]'.</msg>
+<arg>${select_minutes_start}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.348333" elapsed="0.244366"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.593710" level="INFO">Clicking element 'xpath=//label/div[contains(text(),"Rental End Date")]/../following-sibling::div[1]'.</msg>
+<arg>${rental_end_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.592699" elapsed="0.072574"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_end_date}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.666275" elapsed="0.326840"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:13.994635" level="INFO">Clicking element 'xpath=(//div[@data-testid="date-cell-17-2-2024"][1])[2]'.</msg>
+<arg>${select_end_date}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:13.994635" elapsed="0.085431"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:14.081064" level="INFO">Clicking element 'xpath=//input[@data-testid="rental-search-form-time-input-end"]'.</msg>
+<arg>${end_time}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:14.081064" elapsed="0.185034"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:14.267138" level="INFO">Clicking element 'xpath=//div[contains(text(), "Hour")]/following-sibling::div/div/div/div/div[normalize-space() = "9"]'.</msg>
+<arg>${select_hour_end}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:14.267138" elapsed="0.240959"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:14.509098" level="INFO">Clicking element '//div[contains(text(), "Minute")]/following-sibling::div/div/div/div/div[normalize-space() = "0"]'.</msg>
+<arg>${select_minutes_end}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:14.508097" elapsed="0.038013"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:14.546110" level="INFO">Clicking element 'xpath=//div[@data-testid="rental-search-form-cta"]'.</msg>
+<arg>${btn_search_car}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:14.546110" elapsed="2.474286"/>
+</kw>
+<kw name="Element Text Should Be" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:17.022387" level="INFO">Verifying element 'xpath=//div[@aria-label="Breadcrumb"]/../../div[3]//h2' contains exact text 'Car Rental Without Driver'.</msg>
+<arg>${expect_result}</arg>
+<arg>Car Rental Without Driver</arg>
+<doc>Verifies that element ``locator`` contains exact the text ``expected``.</doc>
+<status status="PASS" start="2024-02-13T18:06:17.021394" elapsed="0.049689"/>
+</kw>
+<status status="PASS" start="2024-02-13T18:06:08.252194" elapsed="8.820184"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${select_car}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-02-13T18:06:17.072378" elapsed="2.309099"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:19.382524" level="INFO">Clicking element 'xpath=(//div[contains(text(), "Continue")])[1]/..'.</msg>
+<arg>${select_car}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:19.382524" elapsed="0.528339"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:19.911860" level="INFO">Clicking element 'xpath=(//div[contains(text(), "Continue")])[2]'.</msg>
+<arg>${select_car_provider}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-02-13T18:06:19.911860" elapsed="1.056535"/>
+</kw>
+<kw name="PICKUP SECTION" owner="step-rent-car">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<msg time="2024-02-13T18:06:26.332045" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-17.png"&gt;&lt;img src="selenium-screenshot-17.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2024-02-13T18:06:26.332045" level="FAIL">Element 'xpath=(//*[@id="RENTAL_PICKUP_LOCATION"]//div[contains(text(), "Rental Office")])[1]' not visible after 5 seconds.</msg>
+<arg>${radioBtn_rentalOffice_pickup_loc}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="FAIL" start="2024-02-13T18:06:20.969428" elapsed="5.365652">Element 'xpath=(//*[@id="RENTAL_PICKUP_LOCATION"]//div[contains(text(), "Rental Office")])[1]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${radioBtn_rentalOffice_pickup_loc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.335080" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${dropdown_rentalOffice_pickup_loc}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.335589" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${list_dropdown_rentalOffice}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.335589" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${list_dropdown_rentalOffice}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.335589" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-02-13T18:06:20.969428" elapsed="5.366161">Element 'xpath=(//*[@id="RENTAL_PICKUP_LOCATION"]//div[contains(text(), "Rental Office")])[1]' not visible after 5 seconds.</status>
+</kw>
+<kw name="Wait Until Element Is Not Visible" owner="SeleniumLibrary">
+<arg>${dropdown_rentalOffice_pickup_loc}</arg>
+<doc>Waits until the element ``locator`` is not visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.336594" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.337586" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${radioBtn_otherLocation_dropoff}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.338583" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${radioBtn_otherLocation_dropoff}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.340048" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${dropdown_otherLocation_dropoff}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.341057" elapsed="0.000996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${list_dropdown_otherLocation_dropoff}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.342053" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${add_notes}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.343050" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${add_notes}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.343050" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${add_notes}</arg>
+<arg>"Gate 2E"</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.344046" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btn_continue_productDetail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.344046" elapsed="0.000996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_continue_productDetail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.345545" elapsed="0.000000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<arg>20s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.345545" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${label_contact_detail}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.346544" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_fullname_user}</arg>
+<arg>user1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.346544" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_phone_user}</arg>
+<arg>89898857878</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.347544" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_email_user}</arg>
+<arg>user1@yopmail.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.347544" elapsed="0.000999"/>
+</kw>
+<kw name="Select From List By Value" owner="SeleniumLibrary">
+<arg>${dropdown_title_driver}</arg>
+<arg>MRS</arg>
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.348543" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_fullname_driver}</arg>
+<arg>driver1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.349537" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_phone_driver}</arg>
+<arg>89898857871</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.350534" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn_continue_contact_detail}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.350534" elapsed="0.000996"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_continue_contact_detail}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.351530" elapsed="0.000000"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<arg>${input_special_req}</arg>
+<arg>testOne1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.352527" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_check_require}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.352527" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_check_all_require}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.353523" elapsed="0.000000"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>${btn_save_require}</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.353523" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_save_require}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.353523" elapsed="0.000000"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_continue_to_payment}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.355025" elapsed="0.000000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${btn_continue_payment_send}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.355025" elapsed="0.001026"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<arg>${btn_continue_payment_send}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.356051" elapsed="0.001394"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="NOT RUN" start="2024-02-13T18:06:26.357445" elapsed="0.000000"/>
+</kw>
+<status status="FAIL" start="2024-02-13T18:06:05.451315" elapsed="20.906130">Element 'xpath=(//*[@id="RENTAL_PICKUP_LOCATION"]//div[contains(text(), "Rental Office")])[1]' not visible after 5 seconds.</status>
+</test>
+<doc>Rental car</doc>
+<status status="FAIL" start="2024-02-13T18:06:05.285748" elapsed="21.074084"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Car-Rental">Car-Rental</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
