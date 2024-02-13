@@ -1,4 +1,4 @@
-# Automation Web Motogadai
+# Automation Web Traveloka
 
 This is a project automated web for feature rental car [Traveloka](https://www.traveloka.com/en-id).
 This is a project automated web to solve the following game using an automated test [Puzzle Notification](https://zzzscore.com/1to50/en/).
